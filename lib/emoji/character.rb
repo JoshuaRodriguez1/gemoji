@@ -1,7 +1,9 @@
 # frozen_string_literal: true
+require("active_model")
 
 module Emoji
   class Character
+    include ActiveModel::Naming
     # Inspect individual Unicode characters in a string by dumping its
     # codepoints in hexadecimal format.
     def self.hex_inspect(str)
